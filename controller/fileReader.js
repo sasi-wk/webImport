@@ -86,7 +86,7 @@ module.exports = {
                             refer: [],
                             xray: [],
                             checkup: [],
-                            patient: [],
+                            patient:[],
                             doctor: []
                         }                      
                         var clinic_dsr = new DataSetReader(outputFolder + '/clinic.txt');
@@ -304,8 +304,8 @@ module.exports = {
                             while (appoint_dsr.next()) {
                                 if (appoint_dsr.get('hcode') === service_dsr.get('hcode') && appoint_dsr.get('vn') === service_dsr.get('vn')) {
                                     var appoint_data = {
-                                        appoint_datetime: appoint_dsr.get(''),
-                                        seq: appoint_dsr.get(' seq'),
+                                        appoint_datetime: appoint_dsr.get('appoint_datetime'),
+                                        seq: appoint_dsr.get('seq'),
                                         clinic: appoint_dsr.get('clinic'),
                                         clinic_label: appoint_dsr.get('clinic_label'),
                                         dct: appoint_dsr.get('dct'),
@@ -327,7 +327,7 @@ module.exports = {
                                 if (refer_dsr.get('hcode') === service_dsr.get('hcode') && refer_dsr.get('vn') === service_dsr.get('vn')) {
                                     var refer_data = {
                                         refer_no: refer_dsr.get('refer_no'),
-                                        refer_type: refer_dsr.get('refer_no'),
+                                        refer_type: refer_dsr.get('refer_type'),
                                         refer_type_label: refer_dsr.get('refer_type_label'),
                                         refer_hcode: refer_dsr.get('refer_hcode'),
                                         refer_hcode_label: refer_dsr.get('refer_hcode_label'),
@@ -551,13 +551,13 @@ module.exports = {
                                 }
                             }
                         }
-                        list.push(ServiceDelegate)
-                        //console.log(JSON.stringify(list))
-                        typeof options.callback === 'function' && options.callback(list)
+                        typeof options.callback === 'function' && options.callback(ServiceDelegate)
                     }
+                    removeFile.removeOutputFile( outputFolder)
                 } else {
                     console.log("not find")
                 }
+               
             },3000)
         })
     }

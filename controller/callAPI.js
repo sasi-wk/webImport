@@ -64,43 +64,76 @@ module.exports = {
         userid = response.data.id
         return userid
     },
-    sendDataset: function (list) {
+    sendDataset: function (ServiceDelegate) {
         let url = "http://192.168.1.140:8180/phie/rest/exchange/?token=" + token
         //console.log(url)
         let config = {
             headers: { 'Content-Type': 'application/json' },
         }
-        axios.put(url, JSON.stringify(list), config)
+        axios.put(url,ServiceDelegate, config)
             .then(function (response) {
                 console.log('status send:ok')
                 uploadedDB.serviceSent({
                     uploader: userid,
                     ref: {
-                        hcode:list.checkup[0].hcode,
-                        hn:list.patient[0].hn,
-                        vn:list.vn
+                        hcode:ServiceDelegate.patient[0].hcode,
+                        hn:ServiceDelegate.patient[0].hn,
+                        vn:ServiceDelegate.vn
                     },
                     err_msg: ''
                 })
             })
             .catch(function (error) {
                 if (error.response) {
+                    if(error.response.data&&error.response.data.id!=undefined){
+                        uploadedDB.serviceSent({
+                            uploader: userid,
+                            ref: {
+                                hcode:ServiceDelegate.patient[0].hcode,
+                                hn:ServiceDelegate.patient[0].hn,
+                                vn:ServiceDelegate.vn
+                            },
+                            err_msg:error.response.data.id+': '+error.response.data.msg
+                        })
+                        console.log(ServiceDelegate.patient[0].hcode+':'+ServiceDelegate.patient[0].hn+':'+ServiceDelegate.vn);
+                        console.log(error.response.data);
+                    }
+                    else{
+                        uploadedDB.serviceSent({
+                            uploader: userid,
+                            ref: {
+                                hcode:ServiceDelegate.patient[0].hcode,
+                                hn:ServiceDelegate.patient[0].hn,
+                                vn:ServiceDelegate.vn
+                            },
+                            err_msg:error.response.status+' : '+error.response.statusText
+                        })
+                        console.log('err code'+error.response.status);
+                        console.log('err txt'+error.response.statusText);
+                        console.log(error.response.headers);
+                    }   
+                } else if (error.request) {
                     uploadedDB.serviceSent({
                         uploader: userid,
                         ref: {
-                            hcode:list.checkup[0].hcode,
-                            hn:list.patient[0].hn,
-                            vn:list.vn
+                            hcode:ServiceDelegate.patient[0].hcode,
+                            hn:ServiceDelegate.patient[0].hn,
+                            vn:ServiceDelegate.vn
                         },
-                        err_msg:error.response.data.msg
+                        err_msg:'error.request'
                     })
-                    console.log(error.response.data.msg);
-                    console.log(error.response.status);
-                    console.log(error.response.statusText);
-                    //console.log(error.response.headers);
-                } else if (error.request) {
                     console.log(error.request);
+
                 } else {
+                    uploadedDB.serviceSent({
+                        uploader: userid,
+                        ref: {
+                            hcode:ServiceDelegate.patient[0].hcode,
+                            hn:ServiceDelegate.patient[0].hn,
+                            vn:ServiceDelegate.vn
+                        },
+                        err_msg:'Error: '+error.message
+                    })
                     console.log('Error', error.message);
                 }
                 //console.log(error.config);

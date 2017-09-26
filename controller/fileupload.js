@@ -1,7 +1,7 @@
 var callAPI = require('./callAPI')
 var fileReader = require('./fileReader');
 var uploaded = require('./uploadedDB');
-var dataset =require('.././tmp/data')
+var removeFile = require('./remove')
 
 var multer = require('multer');
 var express = require('express');
@@ -10,7 +10,7 @@ var fs = require('fs');
 var date = new Date();
 var datetimestamp = Date.now();
 var typeoffile = '';
-var fileName=''
+var fileName = ''
 
 /**set folder for file upload*/
 var storage = multer.diskStorage({
@@ -20,8 +20,8 @@ var storage = multer.diskStorage({
     },
     filename: function (req, file, cb) {
         typeoffile = '.' + file.originalname.split('.')[file.originalname.split('.').length - 1]
-        fileName=file.fieldname + '-' + datetimestamp 
-        cb(null,fileName + typeoffile);
+        fileName = file.fieldname + '-' + datetimestamp
+        cb(null, fileName + typeoffile);
     }
 })
 
@@ -41,21 +41,23 @@ fileuploader.post('/upload', function (req, res) {
             console.log('status code: ' + statusCode)
             callAPI.getUserInfo(Token).then(userid => {
                 console.log('user id: ' + userid)
-                upload(req,res,function(err){
+                upload(req, res, function (err) {
                     console.log(req.file)
-                    if(typeoffile !== ".zip"||err){
+                    if (typeoffile !== ".zip" || err) {
                         console.log(err)
                         res.send('only file zip')
                         console.log("only zip file")
                         uploaded.uploadInfo({
-                            uploader:userid,
+                            uploader: userid,
                             datetimestamp: date,
                             filename: req.file.filename,
                             err_msg: err
                         })//uploaded.uploadInfo
-                    }else{
+                        
+                        
+                    } else {
                         uploaded.uploadInfo({
-                            uploader:userid,
+                            uploader: userid,
                             datetimestamp: date,
                             filename: req.file.filename,
                             err_msg: 'upload success'
@@ -63,29 +65,23 @@ fileuploader.post('/upload', function (req, res) {
                         /**call unzip function and read file */
                         fileReader.fileReader({
                             filenamePath: fileName,
-                            inputPath:'./uploads/'+ req.file.filename,
-                            typeoffile:typeoffile,
-                            callback:function(list){
-                                // for(let i=0;i<list.length;i++){
-                                //     // fs.writeFileSync("./tmp/"+i+".txt",JSON.stringify(list[i]), function (err) {
-                                //     //     if (err) {
-                                //     //         return console.log('ERROR: '+err);
-                                //     //     }
-                                //     //     console.log("The file was saved!");
-                                //     // });
-                                //     //console.log(JSON.stringify(list[i]))
-                                // }
+                            inputPath: './uploads/' + req.file.filename,
+                            typeoffile: typeoffile,
+                            callback: function (ServiceDelegate) {
+                                callAPI.sendDataset(ServiceDelegate)
                             }
                         })
-                        callAPI.sendDataset(dataset)                        
+                        
                         res.json({ status: 'upload success', filename: req.file.filename })
-                    }   
+                    }
+                    /**Remove file in uploads directory */
+                    var rmpath = './outputs/' +fileName+typeoffile
+                    console.log(rmpath)
+                    removeFile.removeInputFile(rmpath)
                 })//upload
             })//callAPI.getUserInfo
         })//callAPI.login
-    })//callAPI.getToken()
-
-    
+    })//callAPI.getToken()   
 })//.post
 
 module.exports = fileuploader
