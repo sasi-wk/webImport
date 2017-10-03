@@ -19,7 +19,7 @@ module.exports = {
     uploadInfo: function (options) {
         pool.connect(function (err, client, done) {
             if (err) {
-                console.log("not able to get connection " + err);
+                console.log("not able to get connection: " + err);
             }
             client.query('INSERT INTO uploaded(uploader,uploaded,filename,err_msg) VALUES($1,$2,$3,$4)',
                 [options.uploader, options.datetimestamp, options.filename, options.err_msg]);
@@ -29,10 +29,10 @@ module.exports = {
     serviceSent:function(options){
         pool.connect(function (err, client, done) {
             if (err) {
-                console.log("not able to get connection " + err);
+                console.log("not able to get connection: " + err);
             }
-            client.query('INSERT INTO service_sent(uploader,ref,err) VALUES($1,$2,$3)',
-                [options.uploader, options.ref, options.err_msg]);
+            client.query('INSERT INTO service_sent(uploaded,ref,err_msg) VALUES($1,$2,$3)',
+                [options.uploaded, options.ref, options.err_msg]);
             done()
         })
     }

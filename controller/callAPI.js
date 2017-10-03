@@ -64,47 +64,47 @@ module.exports = {
         userid = response.data.id
         return userid
     },
-    sendDataset: function (ServiceDelegate) {
+    sendDataset: function (options) {
         let url = "http://192.168.1.140:8180/phie/rest/exchange/?token=" + token
         //console.log(url)
         let config = {
             headers: { 'Content-Type': 'application/json' },
         }
-        axios.put(url,ServiceDelegate, config)
+        axios.put(url,options.ServiceDelegate, config)
             .then(function (response) {
                 console.log('status send:ok')
                 uploadedDB.serviceSent({
-                    uploader: userid,
+                    uploaded:options.uploaded,
                     ref: {
-                        hcode:ServiceDelegate.patient[0].hcode,
-                        hn:ServiceDelegate.patient[0].hn,
-                        vn:ServiceDelegate.vn
+                        hcode:options.ServiceDelegate.patient[0].hcode,
+                        hn:options.ServiceDelegate.patient[0].hn,
+                        vn:options.ServiceDelegate.vn
                     },
-                    err_msg: ''
+                    
                 })
             })
             .catch(function (error) {
                 if (error.response) {
                     if(error.response.data&&error.response.data.id!=undefined){
                         uploadedDB.serviceSent({
-                            uploader: userid,
+                            uploaded: options.uploaded,
                             ref: {
-                                hcode:ServiceDelegate.patient[0].hcode,
-                                hn:ServiceDelegate.patient[0].hn,
-                                vn:ServiceDelegate.vn
+                                hcode:options.ServiceDelegate.patient[0].hcode,
+                                hn:options.ServiceDelegate.patient[0].hn,
+                                vn:options.ServiceDelegate.vn
                             },
                             err_msg:error.response.data.id+': '+error.response.data.msg
                         })
-                        console.log(ServiceDelegate.patient[0].hcode+':'+ServiceDelegate.patient[0].hn+':'+ServiceDelegate.vn);
+                        console.log(options.ServiceDelegate.patient[0].hcode+':'+options.ServiceDelegate.patient[0].hn+':'+options.ServiceDelegate.vn);
                         console.log(error.response.data);
                     }
                     else{
                         uploadedDB.serviceSent({
-                            uploader: userid,
+                            uploaded: options.uploaded,
                             ref: {
-                                hcode:ServiceDelegate.patient[0].hcode,
-                                hn:ServiceDelegate.patient[0].hn,
-                                vn:ServiceDelegate.vn
+                                hcode:options.ServiceDelegate.patient[0].hcode,
+                                hn:options.ServiceDelegate.patient[0].hn,
+                                vn:options.ServiceDelegate.vn
                             },
                             err_msg:error.response.status+' : '+error.response.statusText
                         })
@@ -114,11 +114,11 @@ module.exports = {
                     }   
                 } else if (error.request) {
                     uploadedDB.serviceSent({
-                        uploader: userid,
+                        uploaded:options.uploaded,
                         ref: {
-                            hcode:ServiceDelegate.patient[0].hcode,
-                            hn:ServiceDelegate.patient[0].hn,
-                            vn:ServiceDelegate.vn
+                            hcode:options.ServiceDelegate.patient[0].hcode,
+                            hn:options.ServiceDelegate.patient[0].hn,
+                            vn:options.ServiceDelegate.vn
                         },
                         err_msg:'error.request'
                     })
@@ -126,11 +126,11 @@ module.exports = {
 
                 } else {
                     uploadedDB.serviceSent({
-                        uploader: userid,
+                        uploaded:options.uploaded,
                         ref: {
-                            hcode:ServiceDelegate.patient[0].hcode,
-                            hn:ServiceDelegate.patient[0].hn,
-                            vn:ServiceDelegate.vn
+                            hcode:options.ServiceDelegate.patient[0].hcode,
+                            hn:options.ServiceDelegate.patient[0].hn,
+                            vn:options.ServiceDelegate.vn
                         },
                         err_msg:'Error: '+error.message
                     })

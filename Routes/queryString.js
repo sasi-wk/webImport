@@ -1,0 +1,4 @@
+module.exports='SELECT uploaded.uploader,uploaded.uploaded,uploaded.filename,(SELECT count(err_msg) FROM service_sent WHERE uploaded.uploaded = service_sent.uploaded AND service_sent.err_msg is not null  GROUP BY uploaded.uploaded)AS False,(SELECT count(uploaded) FROM service_sent  WHERE uploaded.uploaded = service_sent.uploaded AND service_sent.err_msg IS NULL  GROUP BY uploaded.uploaded)AS Pass,(SELECT (SELECT count(uploaded) FROM service_sent WHERE uploaded.uploaded = service_sent.uploaded AND service_sent.err_msg IS NULL GROUP BY uploaded.uploaded)+(SELECT count(err_msg)FROM service_sent WHERE uploaded.uploaded = service_sent.uploaded AND service_sent.err_msg is not null GROUP BY uploaded.uploaded)) AS Total FROM uploaded;'
+
+
+ 

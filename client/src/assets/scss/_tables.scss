@@ -1,0 +1,60 @@
+.table {
+    white-space: nowrap;
+    width: 100vw;
+    padding: 10px 10px 0 10px;
+
+    &::before {
+        @include clearfix();
+    }
+
+    &::after {
+        @include clearfix();
+    }
+
+    &__main {
+        width: 70vw;
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 10px;
+    }
+
+    &__sub {
+        width: calc(30vw - 35px);
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    table {
+        table-layout: fixed;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        color: #555;
+    }
+
+    tr {
+        &:nth-child(even) {
+            background-color: #f6f6f6;
+        }
+        &:first-child td {
+            border-top: none;
+        }
+    }
+
+    td {
+        line-height: 1.618em;
+        padding: 5px;
+    }
+
+    th {
+        box-sizing: border-box;
+        color: #333;
+        background-color: $table-header-color;
+        padding: 20px 10px;
+    }
+    
+    div.dataTables_scrollBody {
+        overflow-y: auto !important;
+        overflow-x: auto !important;
+        height: calc(100vh - (#{$topbar-height} + #{$button-height} + #{$thead-height} + #{$button-margin} + #{$any-white-space}));
+    }
+}

@@ -2,10 +2,10 @@ var callAPI = require('./callAPI')
 var fileReader = require('./fileReader');
 var uploaded = require('./uploadedDB');
 var removeFile = require('./remove')
-
-var multer = require('multer');
 var express = require('express');
 var fileuploader = express();
+
+var multer = require('multer');
 var fs = require('fs');
 var date = new Date();
 var datetimestamp = Date.now();
@@ -49,7 +49,7 @@ fileuploader.post('/upload', function (req, res) {
                         console.log("only zip file")
                         uploaded.uploadInfo({
                             uploader: userid,
-                            datetimestamp: date,
+                            datetimestamp:datetimestamp,
                             filename: req.file.filename,
                             err_msg: err
                         })//uploaded.uploadInfo
@@ -68,7 +68,10 @@ fileuploader.post('/upload', function (req, res) {
                             inputPath: './uploads/' + req.file.filename,
                             typeoffile: typeoffile,
                             callback: function (ServiceDelegate) {
-                                callAPI.sendDataset(ServiceDelegate)
+                                callAPI.sendDataset({
+                                    ServiceDelegate:ServiceDelegate,
+                                    uploaded:date
+                                })
                             }
                         })
                         

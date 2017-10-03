@@ -1,0 +1,21 @@
+<!-- <div class="button">
+  <input id="selectFile" name="selectFile" type="file" class="file">
+  <button id="btnupload" type="submit" class="btn" data-icon-rs="upload" (click)="uploadFile()"> Upload</button>
+</div>
+<div id="dialog-message" title="Upload complete">
+  <p id="pText" >
+      Your files have uploaded successfully.
+  </p>
+</div> -->
+
+<form action="/api/upload" method="post" enctype="multipart/form-data">
+  <input type="file" id="selectFile" name="selectFile" accept="application/zip">
+  <button id="btnupload" type="submit" class="btn" data-icon-rs="upload" (click)="uploadFile()"> Upload</button>  
+  <div id="dialog-message" title="Upload complete">
+      <p id="pText" >
+         {{statusupload}}
+      </p>
+  </div>
+
+</form>
+

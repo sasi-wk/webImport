@@ -1,0 +1,2 @@
+hcode|vn|refer_no|refer_type|refer_hcode|refer_datetime|chief_complaint|symptom|symptom_historical|prelab|predx|pretreat|cause|othcause|dct|priority|request|active|updatedatetime
+14966|060042309|OU6000680|1|11482|2017-08-28T13:11:00.000+07:00| |ปัสสาวะขัด2wks ptaมีอาการปัสสาวะขัด หนองไหลเวลาปัสสาวะ|||Urethritis: . NOS (N34.2)||1||41047|N||1|2017-08-28T13:11:24.000+07:00

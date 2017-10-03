@@ -1,0 +1,1 @@
+hcode|vn|an|adm_datetime|dsc_datetime|dischs_type|clinic|hptcourse|xray|cultures|pathology|investigation|dct|dscdct|active|updatedatetime

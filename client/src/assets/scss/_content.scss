@@ -1,0 +1,33 @@
+body {
+    font-family: $font-family;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.button {
+    margin: 10px;
+    text-align: right;
+}
+
+button.btn {
+    @include prefix (border-radius,2px);
+    @include prefix (box-shadow,"0px 1px 0px 0px #D6D6D6, inset 0px 1px 0px 0px rgba(255, 255, 255, 0.69), inset 0px -1px 0px 0px rgba(255, 255, 255, 0.69)");
+    @include prefix (transition,"box-shadow linear .3s, border linear .3s");
+    border: 1px solid $border-color;
+    background-color: $button-color;
+    padding: 11px 10px 7px 10px;
+    min-width: 70px;
+    font-size: .9rem;
+    cursor: pointer;
+
+    &:active {
+        @include prefix (box-shadow,"0px -1px 0px 0px #fff, 0px 1px 0px 0px #fff, inset 0px 1px 0px 0px #D6D6D6");
+        border-top: 1px solid darken($border-color, 10%);
+    }
+}

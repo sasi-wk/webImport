@@ -1,0 +1,152 @@
+@font-face {
+    font-family: 'daf_rs';
+    src:url('fonts/icon/daf_rs.eot?466zet');
+    src:url('fonts/icon/daf_rs.eot?#iefix466zet') format('embedded-opentype'),
+        url('fonts/icon/daf_rs.ttf?466zet') format('truetype'),
+        url('fonts/icon/daf_rs.woff?466zet') format('woff'),
+        url('fonts/icon/daf_rs.svg?466zet#daf_rs') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-rs"] , [class*=" icon-rs"] , [data-icon-rs]:before , [data-icon-rs-af]:after , [data-icon-rs='']:before , [data-icon-rs-af='']:after{
+    font-family: 'daf_rs';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/*[data-icon-rs=""]:before {
+    content: "";
+}*/
+
+
+[data-icon-rs="users"]:before {
+    content: "\e805";
+}
+[data-icon-rs="chart"]:before {
+    content: "\e806";
+}
+[data-icon-rs="bi"]:before {
+    content: "\e800";
+}
+[data-icon-rs="kpi"]:before {
+    content: "\e801";
+}
+[data-icon-rs="mgd"]:before {
+    content: "\e802";
+}
+[data-icon-rs="phie"]:before {
+    content: "\e803";
+}
+[data-icon-rs="form"]:before {
+    content: "\e804";
+}
+[data-icon-rs="menu_mini"]:before {
+    content: "\e61f";
+}
+[data-icon-rs="search"]:before {
+    content: "\e61e";
+}
+[data-icon-rs="complacency"]:before {
+    content: "\e60f";
+}
+[data-icon-rs="preventive"]:before {
+    content: "\e610";
+}
+[data-icon-rs="xray"]:before {
+    content: "\e611";
+}
+[data-icon-rs="admit"]:before {
+    content: "\e612";
+}
+[data-icon-rs="allergy"]:before {
+    content: "\e613";
+}
+[data-icon-rs="blood"]:before {
+    content: "\e614";
+}
+[data-icon-rs="cid"]:before {
+    content: "\e615";
+}
+[data-icon-rs="diag"]:before {
+    content: "\e616";
+}
+[data-icon-rs="drug"]:before {
+    content: "\e617";
+}
+[data-icon-rs="finance"]:before {
+    content: "\e618";
+}
+[data-icon-rs="lab"]:before {
+    content: "\e619";
+}
+[data-icon-rs="procedure"]:before {
+    content: "\e61a";
+}
+[data-icon-rs="refer"]:before {
+    content: "\e61b";
+}
+[data-icon-rs="service"]:before {
+    content: "\e61c";
+}
+[data-icon-rs="vitalsign"]:before {
+    content: "\e61d";
+}
+[data-icon-rs="calendar"]:before {
+    content: "\e60a";
+}
+[data-icon-rs="forms"]:before {
+    content: "\e60b";
+}
+[data-icon-rs="menu"]:before {
+    content: "\e60c";
+}
+[data-icon-rs="patient"]:before {
+    content: "\e60d";
+}
+[data-icon-rs="logout"]:before {
+    content: "\e60e";
+}
+[data-icon-rs="add"]:before {
+    content: "\e600";
+}
+[data-icon-rs="arrowright"]:before {
+    content: "\e601";
+}
+[data-icon-rs="arrowleft"]:before {
+    content: "\e602";
+}
+[data-icon-rs="arrowtop"]:before {
+    content: "\e603";
+}
+[data-icon-rs="arrowbottom"]:before {
+    content: "\e604";
+}
+[data-icon-rs="check"]:before {
+    content: "\e605";
+}
+[data-icon-rs="close"]:before {
+    content: "\e606";
+}
+[data-icon-rs="notifi"]:before {
+    content: "\e607";
+}
+[data-icon-rs="trash"]:before {
+    content: "\e608";
+}
+[data-icon-rs="upload"]:before {
+    content: "\e609";
+}
+
+/* ------------------- DATA ICON AFTER ------------------- */
+[data-icon-rs-af=""]:after {
+    content: "";
+}

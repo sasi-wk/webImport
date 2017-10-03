@@ -1,0 +1,158 @@
+/* 
+    Created on : Feb 25, 2014, 10:33:05 AM
+    Author     : arechainut
+----------------------------------------------
+    Default : Jquery Convert Style
+*/
+
+
+
+/* +=+=+=+=+=+=+=+=+=+=+=+ Accordion +=+=+=+=+=+=+=+=+=+=+=+ */ 
+.accordion.ui-accordion{
+
+}
+.accordion.ui-accordion .ui-accordion-header{
+}
+.accordion.ui-accordion .ui-accordion-header.ui-accordion-header-active{
+}
+.accordion.ui-accordion .ui-accordion-content{
+}
+
+/* +=+=+=+=+=+=+=+=+=+=+=+ Dialog +=+=+=+=+=+=+=+=+=+=+=+ */ 
+.ui-dialog{
+}
+.ui-dialog .ui-dialog-titlebar{
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-title{
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close{
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close:before{
+}
+.ui-dialog .ui-dialog-titlebar .ui-dialog-titlebar-close .ui-icon{
+}
+.ui-dialog .ui-dialog-content{
+}
+.ui-dialog .ui-dialog-content.error{
+}
+.ui-widget-overlay{
+}
+
+/* +=+=+=+=+=+=+=+=+=+=+=+ Tabs +=+=+=+=+=+=+=+=+=+=+=+ */ 
+.tabs.ui-tabs{
+}
+.tabs.ui-tabs .ui-tabs-nav{
+}
+.tabs.ui-tabs .ui-tabs-nav li{
+}
+.tabs.ui-tabs .ui-tabs-nav li:last-of-type{
+}
+.tabs.ui-tabs .ui-tabs-nav li:first-of-type{
+}
+.tabs.ui-tabs .ui-tabs-nav li.ui-state-default{
+}
+.tabs.ui-tabs .ui-tabs-nav li.ui-state-default a{
+}
+.tabs.ui-tabs .ui-tabs-nav li.ui-state-default.ui-state-active{
+}
+.tabs.ui-tabs .ui-tabs-nav li.ui-state-default.ui-state-active a{
+}
+.tabs.ui-tabs .ui-tabs-panel{
+}
+
+
+
+/* -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- UI-Datepicker -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- */
+.ui-datepicker{
+}
+.ui-datepicker.ui-widget-content{
+}
+.ui-datepicker .ui-datepicker-header.ui-widget-header{
+}
+.ui-datepicker .ui-datepicker-header  a{
+}
+.ui-datepicker .ui-datepicker-header  a:before{ 
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev{
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next{
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-prev:before{
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-next:before{
+}
+.ui-datepicker .ui-datepicker-header  a span{
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title{
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select{
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select:focus{
+}
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title select option{
+}
+.ui-datepicker .ui-datepicker-calendar{
+}
+.ui-datepicker .ui-datepicker-calendar td:first-of-type{
+}
+.ui-datepicker .ui-datepicker-calendar td:last-of-type{
+}
+.ui-datepicker .ui-datepicker-calendar thead tr th{
+}
+.ui-datepicker .ui-datepicker-calendar tbody{
+}
+.ui-datepicker .ui-datepicker-calendar tbody tr{
+}
+.ui-datepicker .ui-datepicker-calendar tbody tr td{
+}
+.ui-datepicker .ui-datepicker-calendar tbody tr td a , .ui-datepicker .ui-datepicker-calendar tbody tr td span{
+}
+.ui-datepicker .ui-datepicker-calendar tbody tr td a:hover , .ui-datepicker .ui-datepicker-calendar tbody tr td span:hover{
+}
+.ui-datepicker .ui-datepicker-calendar tbody tr td a.ui-state-highlight{
+}
+.ui-datepicker .ui-datepicker-calendar tbody tr td a.ui-state-active{
+}
+.ui-datepicker .ui-datepicker-buttonpane{
+}
+.ui-datepicker .ui-datepicker-buttonpane button{
+}
+.ui-datepicker .ui-datepicker-buttonpane button:active{
+}
+
+
+/* -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- UI-Timepicker -+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+- */
+.ui-timepicker-div{
+}
+.ui-timepicker-div .ui-widget-header{
+}
+.ui-timepicker-div .ui-widget-header .ui-datepicker-title{
+}
+.ui-timepicker-div dl dt{
+}
+.ui-timepicker-div dl dt.ui_tpicker_time_label{
+}
+.ui-timepicker-div dl dt.ui_tpicker_hour_label{
+}
+.ui-timepicker-div dl dt.ui_tpicker_minute_label{
+}
+.ui-timepicker-div dl dd {
+}
+.ui-timepicker-div dl dd.ui_tpicker_time {      
+}
+.ui-timepicker-div dl dd.ui_tpicker_hour {
+}
+.ui-timepicker-div dl dd.ui_tpicker_minute {
+}
+.ui-timepicker-div .ui-slider.ui-slider-horizontal{
+}
+.ui-timepicker-div .ui_tpicker_minute_slider.ui-slider.ui-slider-horizontal{
+}
+.ui-timepicker-div .ui-slider-handle{
+}
+.ui-timepicker-div .ui-slider-handle:before{
+}
+.ui-timepicker-div .ui-slider-handle.ui-state-active{
+}
+.ui-timepicker-div .ui-slider-handle.ui-state-active:before{
+}

@@ -1,0 +1,27 @@
+$font-family: 'THSarabunNew';
+$header-title-font: 'THNiramitAS';
+
+$prefixes: (
+    "-webkit-", 
+    "-moz-",
+    "-ms-",
+    "-o-", 
+    ""
+    );
+
+$topbar-height: 54px;
+$button-height: 36px;
+$button-margin: 10px;
+$thead-height: 56px;
+$any-white-space: 20px;
+
+$gray-color-1: #e9e9e9;
+$gray-color-2: #ececec;
+$gray-color-3: #cacaca;
+$white-color: #fff;
+$primary-color: #4ECB8E;
+
+$header-color: $primary-color;
+$table-header-color: $gray-color-1;
+$button-color: $gray-color-2;
+$border-color: $gray-color-3;

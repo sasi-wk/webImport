@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="table">
+    <div class="table__main">
+      <table class="dataTables_main" width="100%">
+        <thead>
+          <tr>
+            <th>ชื่อผู้อัพโหลด</th>
+            <th>ชื่อไฟล์</th>
+            <th>เวลา</th>
+            <th>ทั้งหมด</th>
+            <th>ผ่าน</th>
+            <th>ไม่ผ่าน</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr  *ngFor="let list of uploadlist;">
+            <td>{{list.uploader}}</td>
+            <td>{{list.filename}}</td>
+            <td>{{list.uploaded}}</td>
+            <td>{{list.total}}</td>
+            <td>{{list.pass}}</td>
+            <td>{{list.false}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <app-errorinfo></app-errorinfo>
+</div>
+
+<!-- <h2>TodoList</h2>
+<div>
+  <ul>
+    <li *ngFor="let todo of todolist;">{{todo.id}} {{todo.title}}</li>
+  </ul>
+</div> -->
+
+
+
+<!-- <h2>{{title}}</h2>
+<div>
+  <ul>
+    <li *ngFor="let list of uploadlist;">{{list.uploaded}}{{list.f}}</li>
+  </ul>
+</div> -->

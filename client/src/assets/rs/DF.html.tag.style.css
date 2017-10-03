@@ -1,0 +1,247 @@
+/* 
+===============================================================
+++++++++++++++++++++ HTML TAG MODIFY STYLE ++++++++++++++++++++
+===============================================================
+*/
+
+*{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+/* +=+=+=+=+=+=+=+=+=+=+=+ Scrollbar +=+=+=+=+=+=+=+=+=+=+=+ */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+::-webkit-scrollbar-track {
+    background: none ;
+}
+::-webkit-scrollbar-track:hover {
+    background: none ;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #BBBBBB;
+    box-shadow: 1px 1px 0px 0px #EBECEF;
+    transition: background-color linear 2s;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #A2A2A2;
+    box-shadow: inset 1px 1px 0px 0px rgba(255, 255, 255, 0.35);
+    transition: background-color linear 2s;
+}
+/* +=+=+=+=+=+=+=+=+=+=+=+ Placeholder +=+=+=+=+=+=+=+=+=+=+=+ 
+::-webkit-input-placeholder {
+   color: #9C9C9C;
+   line-height: 35px;
+}
+:-moz-placeholder {  Firefox 18- 
+   color: #9C9C9C; 
+   line-height: 35px;
+}
+::-moz-placeholder {   Firefox 19+ 
+   color: #9C9C9C;  
+   line-height: 35px;
+}
+:-ms-input-placeholder {  
+   color: #9C9C9C;  
+   line-height: 35px;
+}*/
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+}
+
+html{
+}
+body{
+}
+
+button ,  select , option , select option , .ui-widget select , input{
+}
+.hide , [data-role="temp"]{
+}
+.show{
+}
+.tab1{
+}
+.tab2{
+}
+.text{
+}
+.text_center , [data-type="datenow"] , [data-type="date"]{
+}
+.text_right{
+}
+.text_left{
+}
+.text_detail{
+}
+.under_line{
+}
+.font_bold{
+}
+.red{
+}
+.float:before , .float:after , .file_show:before , .file_show:after{
+}
+.no-close .ui-dialog-titlebar {
+}
+
+/* +=+=+=+=+=+=+=+=+=+=+=+ Warning +=+=+=+=+=+=+=+=+=+=+=+ */
+.warning {
+}
+.warning + .select2 .select2-selection,
+input[type="text"].warning,
+input[type="search"].warning,
+input[type="password"].warning,
+textarea.warning,
+select.warning {
+}
+/* +=+=+=+=+=+=+=+=+=+=+=+ Button +=+=+=+=+=+=+=+=+=+=+=+ */ 
+button.btn , .file_btn{
+}
+button.btn:hover{
+}
+button.btn:active{
+}
+
+/* +=+=+=+=+=+=+=+=+=+=+=+ Input +=+=+=+=+=+=+=+=+=+=+=+ */ 
+input.number_right{
+}
+input[type="text"] , input[type="password"] , textarea , select{
+}
+input[type="text"] , input[type="password"] , textarea{
+}
+input[type="text"] , input[type="password"] , select{
+}
+textarea{
+}
+input[type="text"]:focus , input[type="password"]:focus , textarea:focus{
+}
+
+select{
+}
+
+.input_file{
+}
+.file_btn{
+}
+.file_btn input[type='file']{
+}
+.btn_upload{
+}
+.file_text{
+} 
+.file_text{
+}
+.file_show{
+}
+.file_show span{
+}
+.file_show span img{
+}
+.file_show span button{
+}
+.file_show span button:before{
+}
+.file_show span:hover button{
+}
+
+/* +=+=+=+=+=+=+=+=+=+=+=+ Checkbox & Radio +=+=+=+=+=+=+=+=+=+=+=+ */ 
+[data-type="radio"] , 
+[data-type="checkbox"]{
+}
+[data-type="radio"] input[type="radio"] ,
+[data-type="checkbox"] input[type="checkbox"]{
+}
+[data-type="radio"] span.text ,
+[data-type="checkbox"] span.text{
+}
+[data-type="radio"] span.text{
+}
+[data-type="checkbox"] span.text{
+}
+[data-type="radio"] span.text:before,
+[data-type="checkbox"] span.text:before{
+}
+[data-type="checkbox"] span.text:before{
+}
+[data-type="checkbox"] input[type="checkbox"]:not(:checked) + span.text:before{
+}
+[data-type="checkbox"] input[type="checkbox"]:checked + span.text{
+}
+[data-type="checkbox"] input[type="checkbox"]:checked + span.text:before{
+}
+[data-type="radio"] span.text:before{
+}
+[data-type="radio"] input[type="radio"]:not(:checked) + span.text:before{
+}
+[data-type="radio"] input[type="radio"]:checked + span.text:before{
+}
+
+/* +=+=+=+=+=+=+=+=+=+=+=+ Tabel +=+=+=+=+=+=+=+=+=+=+=+ */ 
+
+.tb_view tbody tr td.colon , .tb_input tbody tr td.colon{
+}
+.tb_view tbody tr td.colon:after ,
+.tb_view tbody tr td span.colon:after ,
+.tb_input tbody tr td.colon:after,
+.tb_input tbody tr td .sub_td .colon:after{
+}
+
+.tb_view{
+}
+.tb_view tbody tr td{
+}
+.tb_view tbody tr td span.colon , .tb_input tbody tr td .sub_td .colon{
+}
+
+.tb_input{
+}
+.tb_input tbody tr td{
+}
+.tb_input tbody tr td.colon{
+}
+.tb_input tbody tr td input , .tb_input tbody tr td textarea , .tb_input tbody tr td select{
+}
+.tb_input tbody tr td textarea{
+}
+.tb_input tbody tr td .sub_td{
+}
+.tb_input tbody tr td .sub_td .colon{
+}
+.tb_input tbody tr td .sub_td span:last-of-type{
+}
+.tb_input.border tr td{
+}
+.tb_input.border thead tr td{
+}
+.tb_input.border tbody tr td{
+}
+.tb_view_list{
+}
+.tb_view_list caption{
+}
+.tb_view_list thead{
+}
+.tb_view_list thead tr{
+}
+.tb_view_list > thead > tr > td, .tb_view_list > thead > tr > th{
+}
+.tb_view_list tbody{
+}
+.tb_view_list tbody tr{
+}
+.tb_view_list tbody tr td{
+}
+.tb_view_list tbody tr:nth-child(odd) td{
+}
+.tb_view_list tbody tr:nth-child(even) td{
+}
+.tb_view_list tbody tr:last-of-type td{
+}
+
+
